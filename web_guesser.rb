@@ -8,7 +8,11 @@ class WebGuesser
     end
 
     def guess_checker(guess)
-      if guess > secret_number
+      if guess > (secret_number + 4)
+        message = "WAY to high"
+      elsif guess < (secret_number - 4)
+        message = "WAY too low"
+      elsif guess > secret_number
         message = "Too High!"
       elsif guess < secret_number
         message = "Too Low"
@@ -28,7 +32,6 @@ get '/' do
 
   erb :index, :locals => {
     :number => number,
-    :guess => 'guess',
     :message => message
   }
 end
