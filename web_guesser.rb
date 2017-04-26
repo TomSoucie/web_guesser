@@ -12,5 +12,6 @@ end
 number = WebGuesser.new.secret_number
 
 get '/' do
-  "THE SECRET NUMBER IS #{number}"
+  "The SECRET NUMBER IS #{number}"
+  # erb :index, locals => {:number => number}
 end
