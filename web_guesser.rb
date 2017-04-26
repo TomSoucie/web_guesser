@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/reloader'
 
 class WebGuesser
   attr_reader :secret_number
@@ -9,6 +10,7 @@ class WebGuesser
 end
 
 number = WebGuesser.new.secret_number
+
 get '/' do
-  "The secret number is #{number}"
+  "THE SECRET NUMBER IS #{number}"
 end
