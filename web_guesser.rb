@@ -17,7 +17,7 @@ class WebGuesser
       elsif guess < secret_number
         message = "Too Low"
       elsif guess == secret_number
-        message = "That's Just Right, you WIN!"
+        message = "You got it right, the secret number is #{secret_number}!"
       end
     end
 
